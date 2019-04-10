@@ -15,13 +15,22 @@ namespace ComicBookGalleryModel
         {
             using (var context = new Context())
             {
+                var serie = new Series()
+                {
+                    Title = "The amazing Spider-man"
+                };
+
                 context.ComicBooks.Add(new ComicBook() {
                     Description ="description test",
                     IssueNumber = 1,
                     PublishedOn = DateTime.Today,
-                    Series = new Series() {
-                        Title = "The amazing Spider-man"
-                    }
+                    Series = serie
+                });
+                context.ComicBooks.Add(new ComicBook() {
+                    Description ="description test",
+                    IssueNumber = 2,
+                    PublishedOn = DateTime.Today,
+                    Series = serie
                 });
 
                 context.SaveChanges();
