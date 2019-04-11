@@ -19,7 +19,7 @@ namespace ComicBookGalleryModel.Models
         [Required, StringLength(100)]
         public string Name { get; set; }
 
-        [NotMapped]
+     
         public string Test { get; set; }
 
         public ICollection<ComicBookArtist> ComicBooks{ get; set; }

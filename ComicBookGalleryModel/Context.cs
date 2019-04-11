@@ -13,7 +13,7 @@ namespace ComicBookGalleryModel
     {
         public Context()
         {
-            Database.SetInitializer(new DropCreateDatabaseAlways<Context>());
+            Database.SetInitializer(new DatabaseInitializer());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
